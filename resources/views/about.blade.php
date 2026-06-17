@@ -31,7 +31,7 @@
      <div class="container">
  
     <div class="text">
-        <img src="p.png" height="100px" width="100px">
+        <img src="{{ asset('img/p.png') }}" height="100px" width="100px">
         <h1>Tentang<br>Kami</h1>
 <br>
         <p>
@@ -44,7 +44,7 @@
     </div>
 
     <div class="gambar">
-        <img src="orang.png">
+        <img src="{{ asset('img/orang.png') }}">
     </div>
 
 </div>
@@ -352,11 +352,11 @@
    <div class="printex-social">
 
     <a href="https://wa.me/6285196093295" class="social-item">
-        <img src="logo-wa.png" alt="WA">
+        <img src="{{ asset('img/logo-wa.png') }}" alt="WA">
     </a>
 
     <a href="https://www.instagram.com/printex.official?igsh=MTlqbjFnZXBsOHl4cg==" class="social-item">
-        <img src="logo-ig.png" alt="IG">
+        <img src="{{ asset('img/logo-ig.png') }}" alt="IG">
     </a>
 
    

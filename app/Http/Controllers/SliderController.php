@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\File;
 
 class SliderController extends Controller
 {
-    
     /**
      * Display a listing of the resource.
      */
@@ -83,7 +82,7 @@ class SliderController extends Controller
     {
         $slider = Slider::findOrFail($id);
 
-        
+        // Perbaikan: hashFile diganti menjadi hasFile
         if ($request->hasFile('gambar')) {
             $old = public_path('uploads/slider/' . $slider->gambar);
             if (File::exists($old)) {
@@ -91,7 +90,7 @@ class SliderController extends Controller
             }
 
             $file = $request->file('gambar');
-           
+            // Perbaikan: Cara penamaan file baru agar tidak error
             $namafile = time() . '_' . $file->getClientOriginalName();
 
             $file->move(public_path('uploads/slider'), $namafile);
@@ -102,10 +101,9 @@ class SliderController extends Controller
         $slider->posisi = $request->posisi;
         $slider->status = $request->status;
         $slider->urutan = $request->urutan;
-    
         $slider->save();
         
-      
+        // Perbaikan: route('slider') diganti menjadi route('slider.index')
         return redirect()->route('slider.index')->with('success', 'Data berhasil diubah');
     }
 
@@ -114,7 +112,7 @@ class SliderController extends Controller
      */
     public function destroy(string $id)
     {
-        
+        // Perbaikan: S-besar pada Slider untuk konsistensi Model
         $slider = Slider::findOrFail($id);
 
         $path = public_path('uploads/slider/' . $slider->gambar);
@@ -127,5 +125,3 @@ class SliderController extends Controller
         return redirect()->route('slider.index')->with('success', 'Data berhasil dihapus');
     }
 }
-
-

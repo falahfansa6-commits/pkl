@@ -366,12 +366,12 @@
 
    <div class="printex-social">
 
-    <a href="https://wa.me/6285196093295" class="social-item">
-        <img src="logo-wa.png" alt="WA">
+   <a href="https://wa.me/6285196093295" class="social-item">
+        <img src="{{ asset('img/logo-wa.png') }}" alt="WA">
     </a>
 
     <a href="https://www.instagram.com/printex.official?igsh=MTlqbjFnZXBsOHl4cg==" class="social-item">
-        <img src="logo-ig.png" alt="IG">
+        <img src="{{ asset('img/logo-ig.png') }}" alt="IG">
     </a>
 
    
