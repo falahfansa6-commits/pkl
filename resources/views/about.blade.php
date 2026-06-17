@@ -52,167 +52,42 @@
  <!-- Lokasi-->
   <div class="lk-main-wrapper">
 
-        <div class="lk-header-banner">
-            <h1>Lokasi<br>Kami</h1>
-            <div class="lk-arrow-circle">➔</div>
-        </div>
-
-        <div class="lk-container">
-            <div class="lk-location-grid">
-
-                <div class="lk-location-item">
-                    <div class="lk-location-title">
-                        <svg class="lk-pin-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                        Salatiga
-                    </div>
-                    <div class="lk-location-address">
-                        Jl. Joko Tingkir, Tengah, Kec. <br>
-                        Tingkir, Kota Salatiga, Jawa <br>
-                        Tengah 50745
-                    </div>
-                </div>
-
-                <div class="lk-location-item">
-                    <div class="lk-location-title">
-                        <svg class="lk-pin-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                        Semarang
-                    </div>
-                    <div class="lk-location-address">
-                        Jl. Ronggolawe Tim. No.29, <br>
-                        Karangayu, Kec. Semarang <br>
-                        Barat, Kota Semarang, <br>
-                        Jawa Tengah 50141
-                    </div>
-                </div>
-
-                <div class="lk-location-item">
-                    <div class="lk-location-title">
-                        <svg class="lk-pin-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                        Kudus
-                    </div>
-                    <div class="lk-location-address">
-                        Gg. 10, Pedawang, Kec. Bae, <br>
-                        Kabupaten Kudus, Jawa <br>
-                        Tengah 59324
-                    </div>
-                </div>
-
-                <div class="lk-location-item">
-                    <div class="lk-location-title">
-                        <svg class="lk-pin-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                        Malang
-                    </div>
-                    <div class="lk-location-address">
-                        Jl. Satsui Tubun No.32, <br>
-                        Gadang, Kec. Sukun, Kota <br>
-                        Malang, Jawa Timur 65149
-                    </div>
-                </div>
-
-                <div class="lk-location-item">
-                    <div class="lk-location-title">
-                        <svg class="lk-pin-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                        Pati
-                    </div>
-                    <div class="lk-location-address">
-                        RT.01/RW.02, Ngulaan, Sukoharjo, <br>
-                        Kec. Wedarijaksa, Kabupaten Pati <br>
-                        Jawa Tengah 59152
-                    </div>
-                </div>
-
-                <div class="lk-location-item">
-                    <div class="lk-location-title">
-                        <svg class="lk-pin-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                        Pekalongan
-                    </div>
-                    <div class="lk-location-address">
-                        Jl.Raya Ambokembang No.14, <br>
-                        RT.01/RW.01, Lor,Podo,Kec, <br>
-                        Kedungwuni, Kabupaten <br>
-                        Pekalongan,Jawa tengah 51173
-                    </div>
-                </div>
-
-                <div class="lk-location-item">
-                    <div class="lk-location-title">
-                        <svg class="lk-pin-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                        Klaten
-                    </div>
-                    <div class="lk-location-address">
-                        Jl. Utama Margorejo, RT.04/RW.03, <br>
-                        Potrowangsan, Karanganom, Kec, <br>
-                        Klaten Utara, Kabupaten Klaten, <br>
-                        Jawa tengah 57438
-                    </div>
-                </div>
-
-                <div class="lk-location-item">
-                    <div class="lk-location-title">
-                        <svg class="lk-pin-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                        Kediri
-                    </div>
-                    <div class="lk-location-address">
-                        Jl.KH.Agus salim No.3 a, <br>
-                        Bandar Kidul, Kec. <br>
-                        Mojoroto,Kota Kediri, <br>
-                        Jawa Timur 63118
-                    </div>
-                </div>
-
-                <div class="lk-location-item">
-                    <div class="lk-location-title">
-                        <svg class="lk-pin-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                        Madiun
-                    </div>
-                    <div class="lk-location-address">
-                        Jl. Sikatan No.68,Nambangan <br>
-                        Lor,kec.Manguharjo,Kota <br>
-                        Madiun, Jawa Timur 63129
-                    </div>
-                </div>
-
-                <div class="lk-location-item">
-                    <div class="lk-location-title">
-                        <svg class="lk-pin-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                        Surabaya
-                    </div>
-                    <div class="lk-location-address">
-                        Jl.Raya Bangkingan No.262, <br>
-                        Bangkingan, Kec. Lakarsantri, <br>
-                        Surabaya, Jawa timur 60214
-                    </div>
-                </div>
-
-                <div class="lk-location-item">
-                    <div class="lk-location-title">
-                        <svg class="lk-pin-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                        Solo
-                    </div>
-                    <div class="lk-location-address">
-                        Jl.Kasuari Dusun I No.B.33,RT/RW.06/07, <br>
-                        Dusun I,Langenharjo, Kec. Grogol, Kabupaten <br>
-                        Sukoharjo, Jawa Tengah 57552
-                    </div>
-                </div>
-                
-                <div class="lk-location-item">
-                    <div class="lk-location-title">
-                        <svg class="lk-pin-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                        Purwokerto
-                    </div>
-                    <div class="lk-location-address">
-                        Jl. Sultan Agung, Dusun IV, Karangnanas, <br>
-                         Kec. Sokaraja, Kabupaten Banyumas, <br>
-                         Jawa Tengah 53181, Indonesia 
-                </div>
-
-                
-
-            </div>
-        </div>
+    <div class="lk-header-banner">
+        <h1>Lokasi<br>Kami</h1>
+        <div class="lk-arrow-circle">➔</div>
     </div>
 
+    <div class="lk-container">
+
+        <div class="lk-location-grid">
+
+            @foreach($locations as $location)
+
+            <div class="lk-location-item">
+
+                <div class="lk-location-title">
+
+                    <svg class="lk-pin-icon" viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+
+                    {{ $location->nama_kota }}
+
+                </div>
+
+                <div class="lk-location-address">
+                    {!! nl2br(e($location->alamat)) !!}
+                </div>
+
+            </div>
+
+            @endforeach
+
+        </div>
+
+    </div>
+
+</div>
     <footer class="printex-footer">
 
 <div class="printex-container">

@@ -5,6 +5,7 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\PelayananController;
 use App\Http\Controllers\LocationController;
+use App\Models\Location;
 
 Route::get('/', [BerandaController::class, 'index'])
     ->name('beranda');
@@ -12,8 +13,10 @@ Route::get('/', [BerandaController::class, 'index'])
 Route::get('/pelayanan', [PelayananController::class, 'index'])
     ->name('pelayanan');
 
-Route::view('/about', 'about')
-    ->name('about');
+Route::get('/about', function () {
+    $locations = Location::latest()->get();
+    return view('about', compact('locations'));
+})->name('about');
 
 Route::view('/kontak', 'kontak')
     ->name('kontak');

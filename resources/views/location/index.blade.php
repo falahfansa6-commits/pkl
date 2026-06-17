@@ -8,13 +8,14 @@
 </head>
 <body>
     <h1>Data Lokasi</h1>
-    <a href="{{ route('location.crete') }}">
+    <a href="{{ route('location.create') }}">
         Tambah Lokasi
     </a>
     <br><br>
 
     @if(session('success'))
-    <p>{{ session('success') }}</p>
+        <p>{{ session('success') }}</p>
+    @endif
 
     <table border="1" cellpadding="10">
      <tr>
@@ -24,22 +25,21 @@
         <th>Aksi</th>
      </tr>
 
-     @foreach ($locations as $lokation )
+     @foreach ($locations as $location)
      <tr>
-      <td>{{ $loop->interation }}</td>
+      <td>{{ $loop->iteration }}</td>
       <td>{{ $location->nama_kota }}</td>
       <td>{{ $location->alamat }}</td>
 
       <td>
-        <a href="{{ route('location.edit',$ocation->id) }}">
+        <a href="{{ route('location.edit', $location->id) }}">
             edit
         </a>
 
-        <form action="{{ route('location.destroy',$location->id) }}" method="POST"
+        <form action="{{ route('location.destroy', $location->id) }}" method="POST"
             style="display:inline">
 
             @csrf
-
             @method('DELETE')
             <button type="submit">
              HAPUS
@@ -47,7 +47,6 @@
         </form>
       </td>
      </tr>
-         
      @endforeach
     </table>
 </body>

@@ -13,8 +13,8 @@ class LocationController extends Controller
      */
     public function index()
     {
-        $location = Location::latest()->get();
-        return view('location.index' , compact('location'));
+        $locations = Location::latest()->get();
+        return view('location.index', compact('locations'));
     }
 
     /**
@@ -35,12 +35,13 @@ class LocationController extends Controller
             'alamat' =>'required'
         ]);
 
-     Location::crete([
-        'nama_kota' =>$request->nama_kota,
-        'alamat' =>$request->alamat
-     ]);
-     return redirect()->route('location.index')
-                      ->with('success', 'Lokasi Berhasil ditambahkan' );
+        Location::create([
+            'nama_kota' => $request->nama_kota,
+            'alamat' => $request->alamat,
+        ]);
+
+        return redirect()->route('location.index')
+                        ->with('success', 'Lokasi Berhasil ditambahkan');
     }
 
     /**
