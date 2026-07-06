@@ -90,21 +90,23 @@
 <br><br>
     <!-- TENTANG -->
  <div class="container">
+ 
     <div class="text">
-        <img src="{{ asset('img/p.png') }}" height="100px" width="100px">
-        <h1>{{ $baru->judul ??'' }}</h1>
-        <p>{{ $baru->isi ??''  }}</p>
-        <br>
-        <a href="{{ url('/admin/baru/update') }}" class="btn-edit">Edit Tentang Kami</a>
+        <img src="p.png" height="100px" width="100px">
+        <h1>Tentang<br>Kami</h1>
+<br>
+        <p>
+            Printex merupakan perusahaaan yang bergerak di bidang jasa
+            printing textile, sablon digital dan kaos premium.
+            kami menyediakan solusi cetak kain berkualitas tinggi
+            untuk kebutuhan industri fashion, konveksi,
+            hingga usaha kecil dan menengah
+        </p>
     </div>
 
     <div class="gambar">
-        <img src="{{ asset('storage/'.($baru->gambar ??'' )) }}">
+        <img src="orang.png">
     </div>
-    @if (session('success'))
-        <p>{{ session('success') }}</p>
-    @endif
-</div>
 
 </div>
 <br>
