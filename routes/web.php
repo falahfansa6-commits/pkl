@@ -25,6 +25,7 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\Admin\Mapscontroller as AdminMapsController;
 use App\Http\Controllers\MapsController;
 use App\Http\Controllers\TeleponController;
+use App\Http\Controllers\TheprodukimageController;
 
 Route::get('/', [BerandaController::class, 'index'])
     ->name('beranda');
@@ -54,6 +55,7 @@ Route::resource('produk3', Produk3Controller::class);
 Route::resource('secound', SecoundController::class);
 Route::resource('service', ServiceController::class);
 Route::resource('theproduk', TheprodukController::class);
+Route::resource('theprodukimage', TheprodukimageController::class);
 
 Route::get('/admin/baru', [BaruController::class, 'index'])->name('admin.baru');
 Route::post('/admin/baru', [BaruController::class, 'store'])->name('admin.baru.store');

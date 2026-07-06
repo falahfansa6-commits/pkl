@@ -6,6 +6,7 @@ use App\Models\Service;
 use App\Models\Slider;
 use App\Models\Theproduk;
 use App\Models\Produk1;
+use App\Models\Theprodukimage;
 
 class PelayananController extends Controller
 {
@@ -21,12 +22,14 @@ class PelayananController extends Controller
         $theproduk = Theproduk::orderBy('urutan', 'asc')->get();
 
         $produk1 = Produk1::latest()->get();
+        $theprodukimage = Theprodukimage::latest()->first();
 
         return view('pelayanan', compact(
             'sliderPelayanan',
             'services',
             'theproduk',
-            'produk1'
+            'produk1',
+            'theprodukimage'
         ));
     }
 }

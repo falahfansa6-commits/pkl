@@ -154,7 +154,9 @@
     </section>
 
     <div class="ks-full-page-container">
-        <div class="ks-box-top-left"></div>
+       <div class="ks-box-top-left"
+     style="background-image: url('{{ asset($theprodukimage->gambar) }}');">
+</div>
 
         <div class="ks-box-top-right">
             <div class="ks-products-header">

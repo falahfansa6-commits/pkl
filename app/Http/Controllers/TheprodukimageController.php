@@ -13,8 +13,8 @@ class TheprodukimageController extends Controller
     public function index()
 
     {
-        $theprodukimage = Theprodukimage::all();
-        return view('theprodukimage.index', compact('theprodukimage'));
+        $gambar = Theprodukimage::all();
+        return view('theprodukimage.index', compact('gambar'));
     }
 
     /**
@@ -30,12 +30,28 @@ class TheprodukimageController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'gambar' => 'required|image|mimes:jpg,jpeg,png,webp|max:2048'
-        ]);
-        $file = $request->file('gambar');
+       $request->validate([
+    'gambar' => 'required|image|mimes:jpg,jpeg,png,webp|max:2048'
+]);
 
-        $namaFile =time().'_'.$file->getClientOriginalName();
+$file = $request->file('gambar');
+
+$namaFile = time().'_'.$file->getClientOriginalName();
+
+$folder = public_path('uploads/theprodukimage');
+
+if (!is_dir($folder)) {
+    mkdir($folder, 0777, true);
+}
+
+$file->move($folder, $namaFile);
+
+Theprodukimage::create([
+    'gambar' => 'uploads/theprodukimage/'.$namaFile
+]);
+
+return redirect()->route('theprodukimage.index')
+    ->with('success', 'Berhasil ditambahkan');
     }
 
     /**
@@ -51,7 +67,7 @@ class TheprodukimageController extends Controller
      */
     public function edit(theprodukimage $theprodukimage)
     {
-        //
+        return view('theprodukimage.edit',compact('theprodukimage'));
     }
 
     /**
@@ -59,7 +75,31 @@ class TheprodukimageController extends Controller
      */
     public function update(Request $request, theprodukimage $theprodukimage)
     {
-        //
+        $request->validate([
+        'gambar'=>'nullable|image|mimes:jpg,jpeg,png,webp|max:2048'
+        ]);
+
+        $gambar = $theprodukimage->gambar;
+        if($request->hasFile('gambar')){
+
+            if(file_exists(public_path($gambar))){
+                unlink(public_path($gambar));
+            }
+
+            $file = $request->file('gambar');
+
+            $namaFile = time().'_'.$file->getClientOriginalName();
+
+            $file->move(public_path('uploads/theprodukimage'),$namaFile);
+
+            $gambar='uploads/theprodukimage/'.$namaFile;
+        }
+        $theprodukimage->update([
+ 'gambar'=>$gambar
+        ]);
+
+        return redirect()->route('theprodukimage.index')
+        ->with('success', 'Gambar berhasil di update');
     }
 
     /**
@@ -67,6 +107,12 @@ class TheprodukimageController extends Controller
      */
     public function destroy(theprodukimage $theprodukimage)
     {
-        //
+        if (file_exists(public_path($theprodukimage->gambar))) {
+            unlink(public_path($theprodukimage->gambar));
+        }
+        $theprodukimage->delete();
+
+        return redirect()->route('theprodukimage.index')
+        ->with('success', 'Berhasil manghapus data gambar');
     }
 }

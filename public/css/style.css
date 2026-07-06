@@ -354,12 +354,12 @@ body {
 
         /* ==================== KIRI ATAS: GAMBAR MESIN ==================== */
         .ks-box-top-left {
-            grid-column: 1 / 2;
-            grid-row: 1 / 2;
-            background-image: url('mesin.png'); 
-            background-size: cover;
-            background-position: center;
-        }
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
         /* ==================== KANAN ATAS: LIST PRODUK ==================== */
         .ks-box-top-right {
