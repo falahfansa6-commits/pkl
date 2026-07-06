@@ -481,7 +481,7 @@ body {
         .ks-box-bottom-right {
             grid-column: 2 / 3;
             grid-row: 2 / 3;
-            background-image: url('baju.png'); 
+            
             background-size: cover;
             background-position: center;
         }

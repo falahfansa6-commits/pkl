@@ -89,6 +89,7 @@ class Produk1Controller extends Controller
         $produk1 = Produk1::findOrFail($id);
 
         $request->validate([
+            
             'judul'  => 'required',
             'isi'    => 'required',
             'gambar' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',

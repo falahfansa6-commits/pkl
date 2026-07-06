@@ -185,8 +185,17 @@
 
         <div class="ks-box-bottom-left">
             <div class="ks-process-title">
-                <h2><span class="ks-number">01</span>Print Sublim</h2>
-                <p class="ks-process-desc">Adapun produk-produk yang umum dihasilkan melalui proses sublimasi</p>
+               @foreach ($produk1 as $item)
+    <div class="ks-process-title">
+        <h2>
+            <span class="ks-number">01</span>{{ $item->judul }}
+        </h2>
+
+        <p class="ks-process-desc">
+            {{ $item->isi }}
+        </p>
+    </div>
+@endforeach
             </div>
             
             <div class="ks-process-footer">
@@ -197,7 +206,11 @@
             </div>
         </div>
 
-        <div class="ks-box-bottom-right"></div>
+        @foreach($produk1 as $item)
+    <div class="ks-box-bottom-right"
+        style="background-image: url('{{ asset($item->gambar) }}');">
+    </div>
+@endforeach
     </div>
 
     <section class="ptx-section-container">
@@ -216,17 +229,25 @@
             <div class="ptx-content-body">
                 <div class="ptx-title-group">
                     <span class="ptx-main-number">02</span>
-                    <h2 class="ptx-main-title">Sablon DTF</h2>
+                    @foreach($produk2 as $item)
+    <h2 class="ptx-main-title">{{ $item->judul }}</h2>
+@endforeach
                 </div>
-                <p class="ptx-main-desc">
-                    Mencetak custom desain satuan atau dalam jumlah besar dengan biaya yang tetap efisien.
-                </p>
+                @foreach($produk2 as $item)
+    <p class="ptx-main-desc">
+        {{ $item->isi }}
+    </p>
+@endforeach
             </div>
         </div>
 
         <div class="ptx-right-side-image">
             <div class="ptx-picture-holder">
-                <img class="ptx-showcase-img" src="merah.png" alt="Display Sablon DTF Products">
+               @foreach($produk2 as $item)
+    <img class="ptx-showcase-img"
+         src="{{ asset($item->gambar) }}"
+         alt="{{ $item->judul }}">
+@endforeach
             </div>
         </div>
     </section>
@@ -235,16 +256,24 @@
         <div class="kp-text-section">
             <div class="kp-title-group">
                 <span class="kp-badge-number">03</span>
-                <h2 class="kp-main-title">Kaos Premium</h2>
+                @foreach($produk3 as $item)
+    <h2 class="kp-main-title">{{ $item->judul }}</h2>
+@endforeach
             </div>
-            <p class="kp-paragraph-desc">
-                Kaos Premium dengan menggunakan bahan cotton combed 30s. Combed 30s adalah jenis kain katun yang terbuat dari 100% serat kapas alami, melalui proses penyisiran (combing) untuk menghilangkan serat-serat pendek dan kotoran. Proses ini menghasilkan kain yang lebih halus, kuat, dan nyaman saat dikenakan.
-            </p>
+            @foreach($produk3 as $item)
+    <p class="kp-paragraph-desc">
+        {{ $item->deskripsi }}
+    </p>
+@endforeach
         </div>
 
         <div class="kp-image-section">
             <div class="kp-picture-holder">
-                <img class="kp-showcase-img" src="kaos.png" alt="Display Kaos Premium">
+                @foreach($produk3 as $item)
+    <img class="kp-showcase-img"
+         src="{{ asset('upload/produk3/' . $item->gambar) }}"
+         alt="{{ $item->judul }}">
+@endforeach
             </div>
         </div>
     </div>
