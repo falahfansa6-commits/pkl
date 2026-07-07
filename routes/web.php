@@ -26,8 +26,9 @@ use App\Http\Controllers\Admin\Mapscontroller as AdminMapsController;
 use App\Http\Controllers\MapsController;
 use App\Http\Controllers\TeleponController;
 use App\Http\Controllers\TheprodukimageController;
-use App\Http\Controllers\Admin\EmpatKontakController as AdminEmpatKontakControllerr;
+use App\Http\Controllers\Admin\EmpatKontakController;
 use App\Http\Controllers\HubKamiController;
+use App\Http\Controllers\Admin\DashboardController;
 
 // Halaman kontak (form)
 Route::get('/kontak', function () {
@@ -74,7 +75,7 @@ Route::resource('secound', SecoundController::class);
 Route::resource('service', ServiceController::class);
 Route::resource('theproduk', TheprodukController::class);
 Route::resource('theprodukimage', TheprodukimageController::class);
-Route::resource('empatkontak', AdminEmpatKontakControllerr::class);
+Route::resource('empatkontak', EmpatKontakController::class);
 
 
 
@@ -134,6 +135,12 @@ Route::get('/kontak', [KontakController::class, 'index'])
 
     //serach
 Route::get('/search', [SearchController::class, 'index'])->name('search');
+
+
+// dashboard
+Route::prefix('admin')->group(function () {
+Route::get('/dashboard', [DashboardController::class,'index'])->name('admin.dashboard');
+});
 
 
 
